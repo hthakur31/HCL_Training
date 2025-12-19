@@ -103,10 +103,13 @@ class ArrayOperations{
 		System.out.println("For Even / odd press '<'");
 		System.out.println("For insertion sort press 'S'");
 		
+		System.out.println();
+		System.out.println();
+		
 		System.out.println("Enter the size of the Array :");
 		
 		int n = sc.nextInt();
-		int [] arr = new int[n];
+		int[] arr = new int[n];
 		System.out.println("Enter an Array :");
 		
 		for(int i = 0; i<n; i++){
