@@ -107,6 +107,11 @@ class ArrayOperations{
 		
 		int n = sc.nextInt();
 		int [] arr = new int[n];
+		System.out.println("Enter an Array :");
+		
+		for(int i = 0; i<n; i++){
+			arr[i] = sc.nextInt();
+		}
 		
 		char ch;
 		System.out.println("Enter your Choice : ");
