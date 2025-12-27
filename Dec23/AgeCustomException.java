@@ -1,5 +1,5 @@
 import java.util.*;
-
+ 
 public class AgeCustomException{
 	static void checkAge(int age) throw InvalidAgeException{
 		if (age <18){
