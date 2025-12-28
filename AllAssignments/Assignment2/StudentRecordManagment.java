@@ -24,6 +24,14 @@ public class StudentRecordManagment{
 		System.out.println();
 		removeRecord(Studentlist,1004);
 		printRecord(Studentlist);
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("Searched Student : ");
+		System.out.println();
+		System.out.println();
+		searchStudent(Studentlist, 1005);
+		
 	}
 	
 	static void printRecord(List<Student> Studentlist){
@@ -44,6 +52,17 @@ public class StudentRecordManagment{
 			}
 		}
 		System.out.println("Student record not found");
+	}
+	
+	static void searchStudent(List<Student> Studentlist, int rollno){
+		
+		for(Student s : Studentlist){
+			if (s.RollNo.equals(rollno)){
+				System.out.println("Student Name = "+s.name+"  Roll Number = "+ s.RollNo+ "  Branch = "+s.branch+"   Mobile Number = "+ s.MobileNo);
+				return;
+			}
+		}
+		System.out.println("Student Record not Found");
 	}
 }
 class Student{
