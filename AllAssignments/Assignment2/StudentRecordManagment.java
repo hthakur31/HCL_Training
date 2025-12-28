@@ -17,10 +17,13 @@ public class StudentRecordManagment{
 		Studentlist.add(s5);
 		
 		printRecord(Studentlist);
-	//	remove(Studentlist);
-	//	System.out.println();
-	//	printRecord(Studentlist);
-		
+		System.out.println();
+		System.out.println();
+		System.out.println("After Remove record using roll no");
+		System.out.println();
+		System.out.println();
+		removeRecord(Studentlist,1004);
+		printRecord(Studentlist);
 	}
 	
 	static void printRecord(List<Student> Studentlist){
@@ -29,15 +32,20 @@ public class StudentRecordManagment{
 		}
 	}
 	
-	//static void remove(List<Student> Studentlist){
+
+	static void removeRecord(List<Student> Studentlist, int rollno){
 	
-	//	Iterator<Student> it = Studentlist.iterator();
-	//	while(it.hasnext()){
-	//		if(it.RollNo.next().equals("1004")){
-	//			it.remove();
-	//		}
-	//	}
+		Iterator<Student> it = Studentlist.iterator();
+		while(it.hasNext()){
+			//Student u = it.next();
+			if(it.next().RollNo == rollno){
+				it.remove();
+				return;
+			}
+		}
+		System.out.println("Student record not found");
 	}
+}
 class Student{
 
 	public String name;
