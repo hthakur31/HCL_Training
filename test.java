@@ -1,23 +1,31 @@
 import java.util.*;
 
-//Use String Methods
 class test {
+		static void treeMAP(){
+			SortedSet set = new TreeSet();
+			set.add("One");
+			setadd("Two");
+			Iterator i = set.iterator();
+			while(i.hasNext()){
+				Object
+			}
+		}
 		
 	public static void main(String[] args) {
-		Gen<Integer,Double> i = new Gen<Integer,Double>();
-		i.show(3,4.55);
-		//Gen<String> j = new Gen<String>();
-		//j.show("Harsh");
-		//Gen<Double> k = new Gen<Double>();
-		//k.show(8.9);
-	
+		
+		
+		Map<Integer, String> map = new HashMap<Integer, String>();
+		map.put(1,"one");
+		map.put(2,"Two");
+		map.put(3,"Three");
+		
+		for(Iterator<Entry < Integer, String>> iterator = map.entrySet().iterator(); iteratorhasNext();){
+			
+			Entry<Integer, String> m = iterator.next();
+			System.out.println("Key : "+ m.getKey()+ " Value : "+ m.getValue);
+		}
+		
 	}
  
 }
 
-class Gen <T, V>{
-	
-	void show(T a, V b){
-		System.out.println(a+ " "+b);
-	}
-}
