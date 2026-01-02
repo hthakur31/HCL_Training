@@ -74,5 +74,6 @@ class ArrayList15Methods{
 		System.out.println("List2: " + list2);
         System.out.println("List3 (created using collection constructor): " + list3);
 		
+		
 	}
 }
