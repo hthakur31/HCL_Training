@@ -1,1 +1,36 @@
 this is file handling 
+
+03/01/2026
+Manual test case formate
+
+Field					Description
+Test cae ID				Unique identifier (e.g, TC_01)
+Test Case Title			Short description of what is tested
+Module name				Module under test
+Preconditions			Conditions before execution
+Test Steps				Step by Step action
+Expected Result 		Expected System behaviour
+Actual Result 			Actual System output
+Status					Pass/Fail
+Remark					Additional Notes
+
+
+Example1: 
+Test Case1
+
+Field					Description
+Test Case ID 			TC_login_02
+Test Case Title			Verify login Using Blank User ID and Password Field
+Module					login
+Preconditions			User Shouldn't be register
+Test Steps				1.Open Login Page
+						2.User ID field do remain blank
+						3.Password field do remain blank
+						4.click login
+Test Data				user id - (Black)
+						password - (Blank)
+
+Expected Result			User should get error messege "Enter valid username and password"
+Actual Result			Error messege displayed
+Status					pass
+Remark					blank field not valid for login system
