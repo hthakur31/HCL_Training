@@ -34,3 +34,11 @@ Expected Result			User should get error messege "Enter valid username and passwo
 Actual Result			Error messege displayed
 Status					pass
 Remark					blank field not valid for login system
+
+
+
+05/01/2026
+
+Automation Testing With Selenium
+Selenium Features
+
