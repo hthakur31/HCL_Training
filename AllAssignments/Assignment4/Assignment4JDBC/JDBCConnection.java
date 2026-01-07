@@ -3,12 +3,12 @@ import java.sql.*;
 public class JDBCConnection {
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		try(Connection con = DB_Connection.connectDB()) {
 			System.out.println("Conncetion Successful !");
 			
 			//insertStudent(con, "Harshvardhan", "B.Tech", "AIML","VIII", 2026, "4578451212","harsh@gmail.com", 95.5, "Active");
-			displayStudent(con);
+			//displayStudent(con);
 			
 		}catch(SQLException e) {
 			System.out.println("Unable to connect!");
