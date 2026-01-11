@@ -2,7 +2,7 @@ package Assignment4JDBC;
 import java.sql.*;
 import java.util.Scanner;
 public class JDBCConnection {
-	Scanner sc = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 		
 		try(Connection con = DB_Connection.connectDB()) {
@@ -10,7 +10,7 @@ public class JDBCConnection {
 			
 			//insertStudent(con, "Harshvardhan", "B.Tech", "AIML","VIII", 2026, "4578451212","harsh@gmail.com", 95.5, "Active");
 			//displayStudent(con);
-			
+			SetDetails(con);
 		}catch(SQLException e) {
 			System.out.println("Unable to connect!");
 			e.printStackTrace();
@@ -20,38 +20,39 @@ public class JDBCConnection {
 		}
 	}
 	
-	public void SetDetails(Connection con) {
-		
+	public static void SetDetails(Connection con) {
+		Scanner sc = new Scanner(System.in);
 		sc.nextLine();
 		System.out.println("Enter Name : ");
 		String Name =  sc.nextLine();
 		
-		System.out.println("Enter Name : ");
+		System.out.println("Enter Course : ");
 		String Course =  sc.nextLine();
 		
-		System.out.println("Enter Name : ");
+		System.out.println("Enter Branch : ");
 		String Branch =  sc.nextLine();
 		
-		System.out.println("Enter Name : ");
+		System.out.println("Enter Semester : ");
 		String Semester =  sc.nextLine();
 		
-		System.out.println("Enter Name : ");
+		System.out.println("Enter year : ");
 		int year =  sc.nextInt();
 		
-		System.out.println("Enter Name : ");
+		System.out.println("Enter Mobile_No : ");
 		String Mobile_No =  sc.nextLine();
 		
-		System.out.println("Enter Name : ");
+		System.out.println("Enter Email : ");
 		String Email =  sc.nextLine();
 		
-		System.out.println("Enter Name : ");
+		System.out.println("Enter Percentage : ");
 		double Percentage =  sc.nextDouble();
 		
-		System.out.println("Enter Name : ");
+		System.out.println("Enter Status : ");
 		String Status =  sc.nextLine();
 		
 		//insertStudent(con, Name, Course, Branch, Semester, year, Mobile_No, Email, Percentage, Status );
-		//insertUsingPreparedStatement(con, Name, Course, Branch, Semester, year, Mobile_No, Email, Percentage, Status );
+		insertUsingPreparedStatement(con, Name, Course, Branch, Semester, year, Mobile_No, Email, Percentage, Status );
+		
 	}
 	//Insert student detail in the student table
 	public static void insertStudent(Connection con, String Name, String Course, String Branch, String Semester, int year, String Mobile_No, String Email, double Percentage, String Status) {
