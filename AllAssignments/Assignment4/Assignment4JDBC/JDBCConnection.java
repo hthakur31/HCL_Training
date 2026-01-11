@@ -11,6 +11,7 @@ public class JDBCConnection {
 			//insertStudent(con, "Harshvardhan", "B.Tech", "AIML","VIII", 2026, "4578451212","harsh@gmail.com", 95.5, "Active");
 			//displayStudent(con);
 			SetDetails(con);
+			displayStudent(con);
 		}catch(SQLException e) {
 			System.out.println("Unable to connect!");
 			e.printStackTrace();
@@ -40,18 +41,19 @@ public class JDBCConnection {
 		
 		System.out.println("Enter Mobile_No : ");
 		String Mobile_No =  sc.nextLine();
-		
+		sc.nextLine();
 		System.out.println("Enter Email : ");
 		String Email =  sc.nextLine();
 		
 		System.out.println("Enter Percentage : ");
 		double Percentage =  sc.nextDouble();
-		
+		sc.nextLine();
 		System.out.println("Enter Status : ");
 		String Status =  sc.nextLine();
 		
 		//insertStudent(con, Name, Course, Branch, Semester, year, Mobile_No, Email, Percentage, Status );
 		insertUsingPreparedStatement(con, Name, Course, Branch, Semester, year, Mobile_No, Email, Percentage, Status );
+		System.out.println("Inset Successful");
 		
 	}
 	//Insert student detail in the student table
@@ -81,7 +83,8 @@ public class JDBCConnection {
 			ps.setString(7, Email);
 			ps.setDouble(8, Percentage);
 			ps.setString(9, Status);
-			
+			int row = ps.executeUpdate();
+			System.out.println(row +" Row Affected");
 		}catch(Exception e) {
 			System.out.println("Exception!");
 		}
@@ -89,7 +92,7 @@ public class JDBCConnection {
 	
 	public static void displayStudent(Connection con) {
 		
-		String sql = "SELECT * FROM student WHERE Branch = 'CSE'";
+		String sql = "SELECT * FROM student";
 		try(Statement stmt = con.createStatement()){
 			ResultSet rs = stmt.executeQuery(sql);
 			System.out.println("Print Student table");
