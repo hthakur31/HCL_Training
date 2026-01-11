@@ -1,7 +1,8 @@
 package Assignment4JDBC;
 import java.sql.*;
+import java.util.Scanner;
 public class JDBCConnection {
-	
+	Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		
 		try(Connection con = DB_Connection.connectDB()) {
@@ -19,6 +20,39 @@ public class JDBCConnection {
 		}
 	}
 	
+	public void SetDetails(Connection con) {
+		
+		sc.nextLine();
+		System.out.println("Enter Name : ");
+		String Name =  sc.nextLine();
+		
+		System.out.println("Enter Name : ");
+		String Course =  sc.nextLine();
+		
+		System.out.println("Enter Name : ");
+		String Branch =  sc.nextLine();
+		
+		System.out.println("Enter Name : ");
+		String Semester =  sc.nextLine();
+		
+		System.out.println("Enter Name : ");
+		int year =  sc.nextInt();
+		
+		System.out.println("Enter Name : ");
+		String Mobile_No =  sc.nextLine();
+		
+		System.out.println("Enter Name : ");
+		String Email =  sc.nextLine();
+		
+		System.out.println("Enter Name : ");
+		double Percentage =  sc.nextDouble();
+		
+		System.out.println("Enter Name : ");
+		String Status =  sc.nextLine();
+		
+		//insertStudent(con, Name, Course, Branch, Semester, year, Mobile_No, Email, Percentage, Status );
+		//insertUsingPreparedStatement(con, Name, Course, Branch, Semester, year, Mobile_No, Email, Percentage, Status );
+	}
 	//Insert student detail in the student table
 	public static void insertStudent(Connection con, String Name, String Course, String Branch, String Semester, int year, String Mobile_No, String Email, double Percentage, String Status) {
 		
@@ -30,6 +64,25 @@ public class JDBCConnection {
 		
 		}catch(SQLException e ) {
 			System.out.println("Error in insertion");
+		}
+	}
+	
+	public static void insertUsingPreparedStatement(Connection con, String Name, String Course, String Branch, String Semester, int year, String Mobile_No, String Email, double Percentage, String Status)  {
+		
+		String sql = "INSERT INTO student (Name, Course, Branch, Semester, year, Mobile_No, Email, Percentage, Status) VALUES (?,?,?,?,?,?,?,?,?)";
+		try(PreparedStatement ps = con.prepareStatement(sql)){
+			ps.setString(1, Name);
+			ps.setString(2, Course);
+			ps.setString(3, Branch);
+			ps.setString(4, Semester);
+			ps.setInt(5, year);
+			ps.setString(6, Mobile_No);
+			ps.setString(7, Email);
+			ps.setDouble(8, Percentage);
+			ps.setString(9, Status);
+			
+		}catch(Exception e) {
+			System.out.println("Exception!");
 		}
 	}
 	
