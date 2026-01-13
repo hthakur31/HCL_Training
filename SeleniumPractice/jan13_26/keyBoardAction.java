@@ -21,7 +21,6 @@ public class keyBoardAction {
 		e2.sendKeys(Keys.BACK_SPACE);
 		Thread.sleep(3000);
 		driver.close();
-		
 	}
 
 }
