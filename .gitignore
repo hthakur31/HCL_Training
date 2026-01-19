@@ -1,5 +1,21 @@
-#ignore class files
-.class
+# Java
+*.class
+*.log
+target/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+
+# Eclipse / IntelliJ
 .classpath
 .project
-/bin/
+.settings/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
