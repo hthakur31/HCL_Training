@@ -1,3 +1,7 @@
+package jan20_26;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 class loginPage {
 	WebDriver driver;
