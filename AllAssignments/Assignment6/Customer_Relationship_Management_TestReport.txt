@@ -14,7 +14,7 @@
  							3. Enter invalid password
  							4. Click on Login button 
  							
- Test Data          		Username – [abc@crm.com](mailto:abc@crm.com)
+ Test Data          		Username – [abc@crm.com
  							Password – 12345  
  							                                           
  Expected Result 			System should display error message “Invalid username or password”

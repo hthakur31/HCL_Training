@@ -19,6 +19,7 @@ Example1:
 Test Case1
 
 Field					Description
+
 Test Case ID 			TC_login_02
 Test Case Title			Verify login Using Blank User ID and Password Field
 Module					login
@@ -34,11 +35,4 @@ Expected Result			User should get error messege "Enter valid username and passwo
 Actual Result			Error messege displayed
 Status					pass
 Remark					blank field not valid for login system
-
-
-
-05/01/2026
-
-Automation Testing With Selenium
-Selenium Features
 

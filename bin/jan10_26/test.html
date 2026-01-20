@@ -1,0 +1,82 @@
+<!DOCTYPE>
+<HTML>
+	<HEAD>
+		<Title> Test HTML </Title>
+		<style>
+			*{
+				margin-bottom : 20px;
+				height : auto;
+				width:auto;
+				padding  : 0;
+				
+			}
+			#d{
+				border-style : solid;
+				border-color : black;
+			}
+			h1{
+				text-decoration: overline;
+				color : red;
+				weight : bold;
+				padding : 10px;
+			}
+			div{
+				justify-content:flex;
+				
+			}
+			#des{
+				padding : 30px;
+				
+			}
+			a{
+				text-decoration : none;
+				size:20px;
+				color:black;
+			}
+			/*a:visited{
+				color:red;
+			}*/
+			a:hover{
+				color: blue;
+				size : 20px;
+			}
+		</style>
+	</HEAD>
+	<BODY>
+		<form action = "/submit" method = "post">
+			<div id = "d">
+			<center><h1>Registration Form</h1></center>
+		Enrollment<input type = "text" id = "enroll"></input></br>
+		Name<input type = "text" id = "name"></input></br>
+		password<input type = "password" id  = "pass"></input></br>
+		Gender<input type = "radio" name = "g">Male</input>
+		<input type = "radio" name = "g">Female</input></br>
+		Hobbies<input type = "checkbox">Singing</input>
+		<input type = "checkbox">dancing</input>
+		<input type = "checkbox">poetry</input>
+		</br>
+		Branch<select>
+			<option>AIML</option>
+			<option>CSE</option>
+			<option>EC</option>
+		
+		</select>
+		</br>
+		Description<input type = "textarea" id = "des"></input>
+		</br>
+		<input type = "submit"></input>
+		</br>
+		<input type = "reset"></input>
+		</br>
+		<input type = "button" value  = "Click"></input>
+		</br>
+		<a href "https://placementguide.vercel.app/"> Placement Guide</a>
+		</div>
+		</form>
+		
+		<frameset cols = "20%,80%">
+			<FRAME src = "G:\BuggetB\index.html">
+			<FRAME src = "G:\BuggetB\mock-interview.html"> 
+		</frameset>
+	</BODY>
+</HTML>
